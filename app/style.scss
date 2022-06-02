@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&family=Open+Sans:wght@400;500&display=swap');@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&family=Open+Sans:wght@400;500&display=swap');
 
 $grey: #E5E5E5;
+$middle-grey: #5C5555;
+$dark-grey: #1A1A1A;
+$orange: #FF5202;
+$white: #ffffff;
 
 * {
   box-sizing: border-box;
@@ -10,7 +14,7 @@ h1, h2 {
   font-family: 'Open Sans', sans-serif;
 }
 
-p {
+p, a {
   font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -22,5 +26,87 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (min-width: 768px) {
+      a {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: none;
+        color: $middle-grey;
+      }
+      .btn-sign-up {
+        border: 1px solid $dark-grey;
+        padding: 16px 46px;
+      }
+      .menu {
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        :first-child {
+          color: $orange;
+        }
+      }
+    } 
+  }
+
+  section {
+    h2 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 51px;
+      letter-spacing: 0.016em;
+      text-transform: uppercase;
+      width: 309px;
+    }
+    p {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.5em;
+      letter-spacing: 0.05em;
+      padding-left: 9px;
+      border-left: 1px solid $dark-grey;
+    }
+    img {
+      margin: 2px 2px 10px 9px;
+      width: 316px;
+      height: 352px;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      
+      a {
+        padding: 17px 33px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      :first-child {
+        background-color: $orange;
+        color: $white;      
+      }
+      :last-child {
+        border: 1px solid $dark-grey;
+        color: $dark-grey;
+      }
+    }
+    
+   
+  }
+
+  @media only screen and (max-width: 767px) {
+    .hide-for-small-only {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    margin: 56px 120px 0;
+
+    .show-for-small-only {
+      display: none;
+    }
   }
 }
