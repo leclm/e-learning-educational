@@ -150,6 +150,39 @@ body footer p {
   body nav .menu :first-child {
     color: #FF5202;
   }
+  body section {
+    display: flex;
+  }
+  body section h1 {
+    font-size: 62px;
+    font-weight: 500;
+    line-height: 95px;
+    width: 640px;
+  }
+  body section p {
+    font-size: 24px;
+    width: 468px;
+    margin-top: 0;
+  }
+  body section .btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 0;
+    height: unset;
+  }
+  body section .btn-container .btn-learn {
+    border: none;
+  }
+  body section div .curly-arrow {
+    position: relative;
+    top: -40px;
+    left: 350px;
+  }
+  body section .main-photo {
+    width: 530px;
+    height: 610px;
+    margin-bottom: 42px;
+  }
   body footer {
     flex-direction: row;
     align-items: center;
