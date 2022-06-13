@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
 }
 
 p, a {
@@ -13,7 +14,10 @@ p, a {
 }
 
 body {
-  background-image: #E5E5E5;
+  background-color: #ffffff;
+  margin: 0;
+}
+body nav, body section {
   margin: 22px 24px;
 }
 body nav {
@@ -21,7 +25,111 @@ body nav {
   justify-content: space-between;
   align-items: center;
 }
-@media only screen and (min-width: 768px) {
+body section h1 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 51px;
+  letter-spacing: 0.016em;
+  width: 309px;
+}
+body section p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  padding-left: 9px;
+  border-left: 1px solid #1A1A1A;
+}
+body section .main-photo {
+  margin: 2px auto 0;
+  width: 316px;
+  height: 352px;
+  display: block;
+}
+body section .btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 327px;
+  margin: 20px auto 0;
+  height: 80px;
+}
+body section .btn-container div {
+  width: 50%;
+}
+body section .btn-container a {
+  padding: 17px 33px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+body section .btn-container .btn-start {
+  background-color: #FF5202;
+  color: #ffffff;
+}
+body section .btn-container .btn-learn {
+  border: 1px solid #1A1A1A;
+  color: #1A1A1A;
+}
+body section .btn-container .curly-arrow {
+  float: right;
+  margin: 24px 10px 0 0;
+}
+body footer {
+  background-color: #262543;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+body footer :first-child {
+  margin: 64px auto 56px;
+}
+body footer div {
+  width: 206px;
+  display: block;
+  margin: auto;
+}
+body footer div :first-child {
+  margin: 0 0 24px;
+  padding: 0;
+}
+body footer div :nth-child(2) {
+  margin: 0 0 8px;
+  padding: 0;
+}
+body footer div :nth-child(3) {
+  margin: 0 0 48px;
+  padding: 0;
+}
+body footer h2 {
+  font-size: 26px;
+  font-weight: 400;
+  width: 206px;
+}
+body footer h3 {
+  font-size: 19px;
+  font-weight: 400;
+}
+body footer p {
+  font-size: 15px;
+  font-weight: 300;
+  opacity: 0.5;
+  width: 206px;
+}
+@media only screen and (max-width: 809px) {
+  body .hide-for-small-only {
+    display: none;
+  }
+}
+@media only screen and (min-width: 810px) {
+  body .show-for-small-only {
+    display: none;
+  }
+  body nav, body section {
+    margin: 56px 120px 0;
+  }
   body nav a {
     font-weight: 700;
     font-size: 16px;
@@ -37,62 +145,29 @@ body nav {
     width: 500px;
     display: flex;
     justify-content: space-between;
+    margin: 0 20px;
   }
   body nav .menu :first-child {
     color: #FF5202;
   }
-}
-body section h2 {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 51px;
-  letter-spacing: 0.016em;
-  text-transform: uppercase;
-  width: 309px;
-}
-body section p {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.5em;
-  letter-spacing: 0.05em;
-  padding-left: 9px;
-  border-left: 1px solid #1A1A1A;
-}
-body section img {
-  margin: 2px 2px 10px 9px;
-  width: 316px;
-  height: 352px;
-}
-body section .btn-container {
-  display: flex;
-  justify-content: space-between;
-}
-body section .btn-container a {
-  padding: 17px 33px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-}
-body section .btn-container :first-child {
-  background-color: #FF5202;
-  color: #ffffff;
-}
-body section .btn-container :last-child {
-  border: 1px solid #1A1A1A;
-  color: #1A1A1A;
-}
-@media only screen and (max-width: 767px) {
-  body .hide-for-small-only {
-    display: none;
+  body footer {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
   }
-}
-@media only screen and (min-width: 768px) {
-  body {
-    margin: 56px 120px 0;
+  body footer div:first-child {
+    margin: 20px auto 56px;
   }
-  body .show-for-small-only {
-    display: none;
+  body footer div:first-child h2 {
+    font-size: 40px;
+    width: 300px;
+  }
+  body footer div:first-child p {
+    font-size: 20px;
+    width: 336px;
+  }
+  body footer .best {
+    margin: 72px auto 77px;
   }
 }
 
